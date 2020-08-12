@@ -1,4 +1,4 @@
-Package: JAGS
+Package: jaspJags
 Type: Package
 Title: JAGS Module for JASP
 Version: 0.1

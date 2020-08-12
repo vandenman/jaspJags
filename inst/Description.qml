@@ -3,7 +3,7 @@ import JASP.Module 	1.0
 
 Description
 {
-	name:			"JAGS"
+	name:			"jaspJags"
 	title : 		qsTr("JAGS")
 	description:	qsTr("JAGS interface for JASP")
 	version:		"0.1"
