@@ -351,9 +351,9 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
     jaspResults[["mainContainer"]][["plotContainer"]] <- plotContainer
   
   colorpalette <- options[["colorScheme"]]
-  oldColorpalette <- JASPgraphs::getGraphOption("palette")
-  on.exit(JASPgraphs::setGraphOption("palette", oldColorpalette))
-  JASPgraphs::setGraphOption("palette", colorpalette)
+  oldColorpalette <- jaspGraphs::getGraphOption("palette")
+  on.exit(jaspGraphs::setGraphOption("palette", oldColorpalette))
+  jaspGraphs::setGraphOption("palette", colorpalette)
   
   if (!(is.null(mcmcResult) || jaspResults[["mainContainer"]][["plotContainer"]]$getError()))
     .JAGSFillPlotContainers(containerObj, options, mcmcResult)
@@ -479,7 +479,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       return(data.frame(x = d[["x"]], y = d[["y"]], g = factor(i)))
     }))
     mapping <- ggplot2::aes(x = x, y = y, color = g)
-    colorScale <- JASPgraphs::scale_JASPcolor_discrete(name = "Chain")
+    colorScale <- jaspGraphs::scale_JASPcolor_discrete(name = "Chain")
   } else {
     n <- nrow(samples[[1L]])
     d <- density(unlist(lapply(samples, `[`, i = 1:n, j = param), use.names = FALSE))
@@ -492,7 +492,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   else
     labs <- ggplot2::labs(x = param, y = gettext("Density"))
   
-  g <- JASPgraphs::themeJasp(
+  g <- jaspGraphs::themeJasp(
     ggplot2::ggplot(df, mapping) +
       ggplot2::geom_line(show.legend = !options[["aggregateChains"]]) +
       labs +
@@ -536,8 +536,8 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       return(data.frame(x = if (isDiscrete) tmpBreaks$unique else d[["mids"]], y = d[["counts"]], g = factor(i)))
     }))
     mapping <- ggplot2::aes(x = x, y = y, color = g, fill = g)
-    colorScale <- JASPgraphs::scale_JASPcolor_discrete(name = gettext("Chain"))
-    fillScale  <- JASPgraphs::scale_JASPfill_discrete(name = gettext("Chain"))
+    colorScale <- jaspGraphs::scale_JASPcolor_discrete(name = gettext("Chain"))
+    fillScale  <- jaspGraphs::scale_JASPfill_discrete(name = gettext("Chain"))
   } else {
     n <- nrow(samples[[1L]])
     d <- graphics::hist(unlist(lapply(samples, `[`, i = 1:n, j = param), use.names = FALSE), breaks = breaksType, plot = FALSE)
@@ -549,7 +549,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   xAxis <- NULL
   # prevent non-discrete axis labels
   if (isDiscrete)
-    xAxis <- ggplot2::scale_x_continuous(breaks = round(JASPgraphs::getPrettyAxisBreaks(tmpBreaks$unique)))
+    xAxis <- ggplot2::scale_x_continuous(breaks = round(jaspGraphs::getPrettyAxisBreaks(tmpBreaks$unique)))
   
   if (removeAxisLabels)
     labs <- ggplot2::labs(x = NULL, y = NULL)
@@ -557,7 +557,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
     labs <- ggplot2::labs(x = param, y = gettext("Counts"))
   
   # TODO: (vandenman - 29/03) from ggplot2 version 3.3.0 onwards we need to uncomment the 'orientation = "x"'
-  g <- JASPgraphs::themeJasp(
+  g <- jaspGraphs::themeJasp(
     ggplot2::ggplot(df, mapping) +
       ggplot2::geom_bar(show.legend = !options[["aggregateChains"]], position = ggplot2::position_dodge(),
                         stat = "identity") + #, orientation = "x") +
@@ -579,9 +579,9 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   g <- ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = g)) +
     ggplot2::geom_line() +
     ggplot2::labs(x = gettext("Iteration"), y = param) +
-    JASPgraphs::scale_JASPcolor_discrete(name = gettext("Chain")) +
-    JASPgraphs::geom_rangeframe() +
-    JASPgraphs::themeJaspRaw(legend.position = if (options[["showLegend"]]) "right" else "none") +
+    jaspGraphs::scale_JASPcolor_discrete(name = gettext("Chain")) +
+    jaspGraphs::geom_rangeframe() +
+    jaspGraphs::themeJaspRaw(legend.position = if (options[["showLegend"]]) "right" else "none") +
     ggplot2::theme(plot.margin = ggplot2::margin(0, 10, 0, 0))
   return(g)
 }
@@ -608,10 +608,10 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   } else {
     geom <- ggplot2::geom_col(position = ggplot2::position_dodge())
   }
-  colorScale <- JASPgraphs::scale_JASPcolor_discrete(name = gettext("Chain"))
-  fillScale  <- JASPgraphs::scale_JASPfill_discrete(name = gettext("Chain"))
+  colorScale <- jaspGraphs::scale_JASPcolor_discrete(name = gettext("Chain"))
+  fillScale  <- jaspGraphs::scale_JASPfill_discrete(name = gettext("Chain"))
   
-  xBreaks <- JASPgraphs::getPrettyAxisBreaks(c(0, nlags))
+  xBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, nlags))
   xBreaks <- xBreaks[xBreaks <= nlags]
   xLimits <- c(0L, nlags)
   
@@ -620,8 +620,8 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
     ggplot2::geom_hline(yintercept = 0, color = "grey", linetype = "dashed", size = 1.05) +
     ggplot2::ylab(gettext("Autocorrelation")) +
     ggplot2::scale_x_continuous(name = gettext("Lag"), breaks = xBreaks, limits = xLimits) +
-    JASPgraphs::geom_rangeframe() +
-    JASPgraphs::themeJaspRaw(legend.position = if (options[["showLegend"]]) "right" else "none")
+    jaspGraphs::geom_rangeframe() +
+    jaspGraphs::themeJaspRaw(legend.position = if (options[["showLegend"]]) "right" else "none")
   
   return(g)
 }
@@ -670,7 +670,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       }
     }
   }
-  return(JASPgraphs::ggMatrixPlot(plotMatrix))
+  return(jaspGraphs::ggMatrixPlot(plotMatrix))
 }
 
 .JAGSPlotHexOrScatter <- function(samples, paramX, paramY, type, removeAxisLabels = TRUE) {
@@ -684,19 +684,19 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   if (type == "hex") {
     geom <- ggplot2::stat_bin_hex()
     mapping = ggplot2::aes(x = x, y = y, fill = ..density..)
-    scaleFill <- JASPgraphs::scale_JASPfill_continuous()
+    scaleFill <- jaspGraphs::scale_JASPfill_continuous()
     scaleCol  <- NULL
   } else {
     geom <- ggplot2::stat_density_2d(mapping = ggplot2::aes(fill = stat(level)), geom = "polygon")
     mapping <- ggplot2::aes(x = x, y = y)
-    scaleFill <- JASPgraphs::scale_JASPfill_continuous()
-    scaleCol  <- JASPgraphs::scale_JASPcolor_continuous()
+    scaleFill <- jaspGraphs::scale_JASPfill_continuous()
+    scaleCol  <- jaspGraphs::scale_JASPcolor_continuous()
   }
   labs <- NULL
   if (removeAxisLabels)
     labs <- ggplot2::labs(x = NULL, y = NULL)
   
-  return(JASPgraphs::themeJasp(ggplot2::ggplot(data = df, mapping = mapping) + geom + labs + scaleFill + scaleCol))
+  return(jaspGraphs::themeJasp(ggplot2::ggplot(data = df, mapping = mapping) + geom + labs + scaleFill + scaleCol))
   
 }
 
