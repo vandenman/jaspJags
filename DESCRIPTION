@@ -8,3 +8,14 @@ Website: https://github.com/vandenman/BayesianReliability
 Maintainer: Don van den Bergh <d.vandenBergh@jasp-stats.com>
 Description: JAGS interface for JASP
 License: GPL (>= 2)
+Encoding: UTF-8
+Imports:
+  coda,
+  ggplot2,
+  jaspBase,
+  jaspGraphs,
+  rjags,
+  stringr
+Remotes:
+  jasp-stats/jaspBase,
+  jasp-stats/jaspGraphs
