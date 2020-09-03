@@ -4,11 +4,13 @@ Title: JAGS Module for JASP
 Version: 0.1
 Date: 2020-04-08
 Author: Don van den Bergh
-Website: https://github.com/vandenman/BayesianReliability
+Website: jasp-stats.org
 Maintainer: Don van den Bergh <d.vandenBergh@jasp-stats.com>
 Description: JAGS interface for JASP
 License: GPL (>= 2)
 Encoding: UTF-8
+Depends:
+    R (>= 3.5)
 Imports:
   coda,
   ggplot2,

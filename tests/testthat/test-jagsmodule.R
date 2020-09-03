@@ -1,16 +1,9 @@
 context("JAGS")
 
 options <- jaspTools::analysisOptions("JAGS")
-options$.meta <- list(initialValues = list(list(levels = list(containsColumn = TRUE)), 
-                                           list(levels = list(containsColumn = TRUE))), model = list(
-                                             columns = list(containsColumn = TRUE), parameters = list(
-                                               containsColumn = TRUE)), monitoredParametersList = list(
-                                                 containsColumn = TRUE), parametersShown = list(containsColumn = TRUE), 
-                      userData = list(list(levels = list(containsColumn = TRUE)), 
-                                      list(levels = list(containsColumn = TRUE))))
-options$initialValues <- list(list(levels = "Row 1", name = "Parameter", values = "theta"), 
+options$initialValues <- list(list(levels = "Row 1", name = "Parameter", values = "theta"),
                               list(levels = "Row 1", name = "R Code", values = "..."))
-options$model <- list(columns = list(), model = "model{\n theta ~ dbeta(1, 1)\n k ~ dbinom(theta, n)\n mu ~ dnorm(0, 1)}", 
+options$model <- list(columns = list(), model = "model{\n theta ~ dbeta(1, 1)\n k ~ dbinom(theta, n)\n mu ~ dnorm(0, 1)}",
                       parameters = c("theta", "k"))
 options$noBurnin <- 1
 options$noChains <- 4
@@ -21,10 +14,27 @@ options$plotDensity <- TRUE
 options$plotHistogram <- TRUE
 options$plotTrace <- TRUE
 options$plotBivarHex <- TRUE
-options$userData <- list(list(levels = c("Row 0", "Row 1"), name = "Parameter", values = c("k", 
-                                                                                           "n")), list(levels = c("Row 0", "Row 1"), name = "R Code", values = c("70", 
-                                                                                                                                                                 "100")))
+options$userData <- list(list(
+  levels = c("Row 0", "Row 1"),
+  name = "Parameter", values = c("k", "n")
+), list(
+  levels = c("Row 0", "Row 1"),
+  name = "R Code",
+  values = c("70", "100")
+))
 options$parameters <- c("\"theta\"", "\"mu\"")
+
+
+old.coda.samples <- rjags::coda.samples
+new.coda.samples <- function(...) {
+  candidates <- c("jags-test-model.rds", file.path("tests", "testthat", "jags-test-model.rds"))
+  testFile <- Filter(file.exists, candidates)
+  return(readRDS(testFile))
+}
+
+jaspTools:::replaceFn("coda.samples", new.coda.samples, "rjags")
+on.exit({jaspTools:::replaceFn("coda.samples", old.coda.samples, "rjags")})
+
 set.seed(1)
 results <- jaspTools::runAnalysis("JAGS", "debug.csv", options)
 

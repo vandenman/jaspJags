@@ -112,11 +112,11 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       inits[[i]]$.RNG.seed <- runif(1, 0, 2^31)
     }
   }
-  
+
   # this code is similar to how R2jags does it, but with
   # a try around it.
   e <- try({
-    
+
     # compile model
     model <- rjags::jags.model(
       file     = modelFile,
@@ -125,7 +125,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       data     = datList,
       inits    = inits#unname(lapply(inits, list))
     )
-    
+
     # sample burnin
     rjags::adapt(
       object         = model,
@@ -134,7 +134,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       progress.bar   = "none",
       end.adaptation = TRUE
     )
-    
+
     # sample remainder
     samples <- rjags::coda.samples(
       model          = model,
@@ -144,7 +144,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       by             = 0L,
       progress.bar   = "none"
     )
-    
+
     fit <- coda:::summary.mcmc.list(samples, quantiles = c(0.025, 0.5, 0.975))
     neff <- coda::effectiveSize(samples)
     
