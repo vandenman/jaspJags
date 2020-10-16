@@ -12,12 +12,12 @@ Encoding: UTF-8
 Depends:
     R (>= 3.5)
 Imports:
-  coda,# (== 0.19-3),
-  ggplot2,# (== 3.2.1),
+  coda,
+  ggplot2,
   jaspBase,
   jaspGraphs,
-  rjags,# (== 4-9),
-  stringr,# (== 1.4.0)
+  rjags,
+  stringr,
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs

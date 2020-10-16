@@ -38,7 +38,6 @@ jobs:
           install.packages('remotes')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-          remotes::install_github('jasp-stats/jaspTools')
         shell: Rscript {0}
 
       - name: Cache R packages
@@ -61,19 +60,12 @@ jobs:
         env:
           R_REMOTES_UPGRADE: never
         run: |
+          remotes::install_github("jasp-stats/jaspTools")
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
-      - name: Check
-        env:
-          _R_CHECK_CRAN_INCOMING_REMOTE_: false
-        run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "note", check_dir = "check")
+      - name: Unit tests
+        run: |
+          Sys.setenv(REQUIRED_PKGS = .libPaths()[1])
+          source("tests/testthat.R")
         shell: Rscript {0}
-
-      - name: Upload check results
-        if: failure()
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ runner.os }}-r${{ matrix.config.r }}-results
-          path: check
