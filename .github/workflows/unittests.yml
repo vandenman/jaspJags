@@ -15,8 +15,8 @@ jobs:
       matrix:
         config:
           # - {os: windows-latest, r: 'release'}
-          - {os: macOS-latest, r: 'release'}
-          - {os: ubuntu-20.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
+          - {os: macOS-latest, r: "release"}
+          - {os: ubuntu-20.04, r: "release", rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -31,11 +31,24 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@master
 
+      - name: Please jaspTools on macOS
+        if : runner.os == 'macOS'
+        run: |
+          path <- file.path("~", "Frameworks", "R.framework", "Versions")
+          dir.create(path, recursive = TRUE)
+          txt <- sprintf(".libPaths(\"%s\")", path)
+          file.create("~/.Makevars")
+          fileConn <- file("~/.Makevars")
+          writeLines(txt, fileConn)
+          close(fileConn)
+        shell: Rscript {0}
+
       - name: Query dependencies
         env:
           R_REMOTES_UPGRADE: never
         run: |
-          install.packages('remotes')
+          print(.libPaths())
+          install.packages("remotes")
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
@@ -66,6 +79,11 @@ jobs:
 
       - name: Unit tests
         run: |
-          Sys.setenv(REQUIRED_PKGS = .libPaths()[1])
+          if (!grepl("linux", version$os)) {
+            print("on macOS")
+            Sys.setenv(REQUIRED_PKGS = .libPaths()[1])
+          } else {
+            print("on linux")
+          }
           source("tests/testthat.R")
         shell: Rscript {0}
