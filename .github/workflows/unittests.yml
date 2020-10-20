@@ -34,7 +34,9 @@ jobs:
 
       - name: Setup libpaths on macOS
         if : runner.os == 'macOS'
-        run: mkdir -p $R_LIBS
+        run: |
+          mkdir -p $R_LIBS
+          ln -s $R_LIBS /Users/runner/work/_temp/Library
 
       - name: Query dependencies
         env:
@@ -75,8 +77,20 @@ jobs:
           if (!grepl("linux", version$os)) {
             print("on macOS")
             Sys.setenv(REQUIRED_PKGS = .libPaths()[1])
+            source("tests/testthat.R")
           } else {
             print("on linux")
+            # adapted from testthat.R for linux
+            library(jaspTools)
+            library(testthat)
+
+            setupJaspTools(pathJaspDesktop = NULL, pathJaspRequiredPkgs = NULL, installJaspModules = FALSE, force = FALSE)
+            remotes::install_local(getwd(), upgrade = "never", force = FALSE)
+            setPkgOption("module.dirs", getwd())
+            options("testthat.progress.max_fails" = 1E3L)
+            result <- testthat::test_dir("tests/testthat")
+            result <- as.data.frame(result)
+            if (sum(result$failed) > 0 || sum(result$error) > 0)
+              quit(save = "no", status = 1)
           }
-          source("tests/testthat.R")
         shell: Rscript {0}
