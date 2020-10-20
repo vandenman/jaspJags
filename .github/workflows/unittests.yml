@@ -76,7 +76,7 @@ jobs:
         run: |
           if (!grepl("linux", version$os)) {
             print("on macOS")
-            Sys.setenv(REQUIRED_PKGS = .libPaths()[1])
+            Sys.setenv(REQUIRED_PKGS = "~")
             source("tests/testthat.R")
           } else {
             print("on linux")
