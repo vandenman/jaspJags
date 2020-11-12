@@ -256,10 +256,13 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
 
 .JAGSReadData <- function(jaspResults, options) {
 
-  if (jaspResults[["mainContainer"]]$getError() || !.JAGSgetGoodModel(jaspResults) || !.JAGShasData(options))
+  columnsFoundInUserCode <- .JAGSgetColumnNamesInUserCode(options)
+  if (jaspResults[["mainContainer"]]$getError() ||
+      !.JAGSgetGoodModel(jaspResults) ||
+      (!.JAGShasData(options) && length(columnsFoundInUserCode) == 0L))
     return(NULL)
 
-  varsToRead <- options[["model"]][["columns"]]
+  varsToRead <- union(options[["model"]][["columns"]], columnsFoundInUserCode)
   dataset <- .readDataSetToEnd(columns.as.numeric = varsToRead)
   return(dataset)
 }
@@ -789,7 +792,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
       if (is.null(string) || string == "" || string == "...") { # this shouldn't be possible, but if string = NULL, parse prompts for user input.
         next
       }
-      obj <- try(eval(parse(text = encodeColNames(string)), envir = envir, enclos = globalenv()))
+      obj <- try(eval(parse(text = string), envir = envir, enclos = globalenv()))
       if (isTryError(obj)) {
         jaspResults[["mainContainer"]]$setError(gettextf("The R code for %1$s crashed with error:\n%2$s",
                                                          type, .extractErrorMessage(obj)))
@@ -818,6 +821,44 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   )
   if (isTryError(e))
     .JAGSsetModuleLoadingError(e)
+}
+
+.JAGSgetColumnNamesInUserCode <- function(options) {
+
+  targets <- Filter(
+    function(x) x != "...",
+    c(
+      options$userData[[2L]]$values,
+      options$initialValues[[2L]]$values
+    )
+  )
+  allColumnNames <- .allColumnNamesDataset()
+  columnsFound <- c()
+  if (length(allColumnNames) > 0L)
+    for (target in targets) {
+      expr <- parse(text = target)
+      newColumnsFound <- .JAGSlocateColumnNamesInExpression(expr, allColumnNames)
+      columnsFound <- union(columnsFound, newColumnsFound)
+    }
+  return(columnsFound)
+}
+
+.JAGSlocateColumnNamesInExpression <- function(expr, keyvals, res = c()) {
+
+  if (length(expr) == 0L)
+    return()
+
+  for (i in seq_along(expr)) {
+
+    if (is.call(expr[[i]]))
+      res <- Recall(expr[[i]][-1L], keyvals, res)
+
+    nm <- deparse(expr[[i]])
+    if (is.name(expr[[i]]) && nm %in% keyvals && !(nm %in% res))
+      res <- c(res, nm)
+
+  }
+  return(res)
 }
 
 # one line helpers ----
