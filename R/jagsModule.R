@@ -799,7 +799,8 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
                                                          type, mode(obj), paste(class(obj), collapse = ",")))
         return()
       } else {
-        oneOutput[[i]] <- obj
+        oneOutput[[i]]         <- obj
+        envir[[paramNms[[i]]]] <- obj
       }
     }
     if (any(lengths(oneOutput) > 0L))
