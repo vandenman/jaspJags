@@ -25,12 +25,11 @@ import JASP.Controls	1.0
 Form
 {
 	columns: 1
-	TextArea
+	JAGSTextArea
 	{
 		id:			jagsModel
 		title:		qsTr("Enter JAGS model below")
 		name:		"model"
-		textType:	"JAGSmodel"
 		text:		"model{\n\n}"
 	}
 
