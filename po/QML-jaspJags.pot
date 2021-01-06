@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "JAGS"
+msgstr ""
+
+msgctxt "Description|"
+msgid "JAGS interface for JASP"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Enter JAGS model below"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Parameters in model"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Monitor these parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Monitored parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Show results for these parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Color scheme for plots:"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Colorblind"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Colorblind Alt."
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Viridis"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Blue"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Gray"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Aggregate chains for densities and histograms"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Show legends"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Density"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Histogram"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Trace"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Autocorrelation"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "No. lags"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Type"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "line"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "bar"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Bivariate scatter"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Diagonal plot type"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Off-diagonal plot type"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Hexagonal"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Contour"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Initial Values"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Observed Values"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Advanced"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "MCMC parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "No. samples"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "No. burnin samples"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Thinning"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "No. chains"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Show results for"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "all monitored parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "selected parameters"
+msgstr ""
+
+msgctxt "JAGS|"
+msgid "Show Deviance"
+msgstr ""

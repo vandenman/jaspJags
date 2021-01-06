@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "JAGS"
+msgstr "JAGS"
+
+msgctxt "Description|"
+msgid "JAGS interface for JASP"
+msgstr "JAGS-Bedienoberfläche für JASP"
+
+msgctxt "JAGS|"
+msgid "Enter JAGS model below"
+msgstr "JAGS-Modell unten eingeben"
+
+msgctxt "JAGS|"
+msgid "Parameters in model"
+msgstr "Modellparameter"
+
+msgctxt "JAGS|"
+msgid "Monitor these parameters"
+msgstr "Diese Parameter beobachten"
+
+msgctxt "JAGS|"
+msgid "Monitored parameters"
+msgstr "Beobachtete Parameter"
+
+msgctxt "JAGS|"
+msgid "Show results for these parameters"
+msgstr "Ergebnisse für diese Parameter anzeigen"
+
+msgctxt "JAGS|"
+msgid "Plots"
+msgstr "Abbildungen"
+
+msgctxt "JAGS|"
+msgid "Color scheme for plots:"
+msgstr "Farbschema für Abbildungen:"
+
+msgctxt "JAGS|"
+msgid "Colorblind"
+msgstr "Farbenblind"
+
+msgctxt "JAGS|"
+msgid "Colorblind Alt."
+msgstr "Farbenblind alt."
+
+msgctxt "JAGS|"
+msgid "Viridis"
+msgstr "Viridis"
+
+msgctxt "JAGS|"
+msgid "Blue"
+msgstr "Blau"
+
+msgctxt "JAGS|"
+msgid "Gray"
+msgstr "Grau"
+
+msgctxt "JAGS|"
+msgid "Aggregate chains for densities and histograms"
+msgstr "Ketten für Verteilungen und Histogramme aggregieren"
+
+msgctxt "JAGS|"
+msgid "Show legends"
+msgstr "Legenden anzeigen"
+
+msgctxt "JAGS|"
+msgid "Density"
+msgstr "Dichte"
+
+msgctxt "JAGS|"
+msgid "Histogram"
+msgstr "Histogramm"
+
+msgctxt "JAGS|"
+msgid "Trace"
+msgstr "Spur"
+
+msgctxt "JAGS|"
+msgid "Autocorrelation"
+msgstr "Autokorrelation"
+
+msgctxt "JAGS|"
+msgid "No. lags"
+msgstr "Anzahl Verzögerungen"
+
+msgctxt "JAGS|"
+msgid "Type"
+msgstr "Typ"
+
+msgctxt "JAGS|"
+msgid "line"
+msgstr "Linie"
+
+msgctxt "JAGS|"
+msgid "bar"
+msgstr "Balken"
+
+msgctxt "JAGS|"
+msgid "Bivariate scatter"
+msgstr "Bivariate spreiding"
+
+msgctxt "JAGS|"
+msgid "Diagonal plot type"
+msgstr "Diagrammtyp der Diagonale"
+
+msgctxt "JAGS|"
+msgid "Off-diagonal plot type"
+msgstr "Diagrammtyp der Nebendiagonale"
+
+msgctxt "JAGS|"
+msgid "Hexagonal"
+msgstr "Hexagonal"
+
+msgctxt "JAGS|"
+msgid "Contour"
+msgstr "Kontouren"
+
+msgctxt "JAGS|"
+msgid "Initial Values"
+msgstr "Startwerte"
+
+msgctxt "JAGS|"
+msgid "Observed Values"
+msgstr "Beobachtete Werte"
+
+msgctxt "JAGS|"
+msgid "Advanced"
+msgstr "Weiteres"
+
+msgctxt "JAGS|"
+msgid "MCMC parameters"
+msgstr "MCMC-Parameter"
+
+msgctxt "JAGS|"
+msgid "No. samples"
+msgstr "Stichprobenumfang"
+
+msgctxt "JAGS|"
+msgid "No. burnin samples"
+msgstr "Stichprobenumfang Aufwärmphase"
+
+msgctxt "JAGS|"
+msgid "Thinning"
+msgstr "Ausdünnung"
+
+msgctxt "JAGS|"
+msgid "No. chains"
+msgstr "Anzahl Ketten"
+
+msgctxt "JAGS|"
+msgid "Show results for"
+msgstr "Ergebnisse anzeigen für"
+
+msgctxt "JAGS|"
+msgid "all monitored parameters"
+msgstr "alle überwachten Parameter"
+
+msgctxt "JAGS|"
+msgid "selected parameters"
+msgstr "ausgewählte Parameter"
+
+msgctxt "JAGS|"
+msgid "Show Deviance"
+msgstr "Devianz anzeigen"

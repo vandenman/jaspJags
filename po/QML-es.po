@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+#, fuzzy
+msgctxt "Description|"
+msgid "JAGS"
+msgstr "JAGS"
+
+#, fuzzy
+msgctxt "Description|"
+msgid "JAGS interface for JASP"
+msgstr "Interfaz JAGS para JASP"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Enter JAGS model below"
+msgstr "Ingrese el modelo JAGS a continuación"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Parameters in model"
+msgstr "Parámetros en modelo"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Monitor these parameters"
+msgstr "Monitorear estos parámetros"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Monitored parameters"
+msgstr "Parámetros monitoreados"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Show results for these parameters"
+msgstr "Mostrar resultados para estos parámetros"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Plots"
+msgstr "Parcelas"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Color scheme for plots:"
+msgstr "Esquema de color para parcelas:"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Colorblind"
+msgstr "Daltónico"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Colorblind Alt."
+msgstr "Daltonismo Alt."
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Viridis"
+msgstr "Viridis"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Blue"
+msgstr "Azul"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Gray"
+msgstr "gris"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Aggregate chains for densities and histograms"
+msgstr "Cadenas agregadas para densidades e histogramas"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Show legends"
+msgstr "Mostrar leyendas"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Density"
+msgstr "Densidad"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Histogram"
+msgstr "Histograma"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Trace"
+msgstr "Rastro"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Autocorrelation"
+msgstr "Autocorrelación"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "No. lags"
+msgstr "No retrasos"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Type"
+msgstr "Tipo"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "line"
+msgstr "línea"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "bar"
+msgstr "bar"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Bivariate scatter"
+msgstr "Dispersión bivariada"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Diagonal plot type"
+msgstr "Tipo de parcela diagonal"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Off-diagonal plot type"
+msgstr "Tipo de gráfico fuera de la diagonal"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Hexagonal"
+msgstr "Hexagonal"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Contour"
+msgstr "Contorno"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Initial Values"
+msgstr "Valores iniciales"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Observed Values"
+msgstr "Valores observados"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Advanced"
+msgstr "Avanzado"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "MCMC parameters"
+msgstr "Parámetros de MCMC"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "No. samples"
+msgstr "No muestras"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "No. burnin samples"
+msgstr "No. de muestras quemadas"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Thinning"
+msgstr "Adelgazamiento"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "No. chains"
+msgstr "No cadenas"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Show results for"
+msgstr "Mostrar resultados para"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "all monitored parameters"
+msgstr "todos los parámetros monitoreados"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "selected parameters"
+msgstr "parámetros seleccionados"
+
+#, fuzzy
+msgctxt "JAGS|"
+msgid "Show Deviance"
+msgstr "Mostrar desviación"

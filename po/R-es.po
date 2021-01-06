@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JASP 0.9.2\n"
+"POT-Creation-Date: 2021-01-05 09:39\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"The following names appeared both in the data set and in the user specified "
+"data:\n"
+"%s"
+msgstr ""
+
+msgid "Please specify which parameters to monitor!"
+msgstr ""
+
+msgid "Please specify which parameters to show output for!"
+msgstr ""
+
+msgid "Posterior"
+msgstr ""
+
+msgid "95%% Credible Interval"
+msgstr ""
+
+msgid "Rhat"
+msgstr ""
+
+msgid "Parameter"
+msgstr ""
+
+msgid "Mean"
+msgstr ""
+
+msgid "Median"
+msgstr ""
+
+msgid "SD"
+msgstr ""
+
+msgid "Lower"
+msgstr ""
+
+msgid "Upper"
+msgstr ""
+
+msgid "Point est."
+msgstr ""
+
+msgid "Upper CI"
+msgstr ""
+
+msgid "Effective Sample Size"
+msgstr ""
+
+msgid "No data was supplied, everything was sampled from the priors!"
+msgstr ""
+
+msgid "Deviance cannot be computed without data."
+msgstr ""
+
+msgid ""
+"Failed to compute the Rhat statistic. This is expected if the model contains "
+"discrete parameters."
+msgstr ""
+
+msgid "The multivariate potential scale reduction factor is estimated at %.3f."
+msgstr ""
+
+msgid ""
+"Rhat statistic cannot be computed for only one chain. It is strongly "
+"recommoned to run more than one chain to assess MCMC convergence!"
+msgstr ""
+
+msgid "Marginal Density"
+msgstr ""
+
+msgid "Marginal Histogram"
+msgstr ""
+
+msgid "Trace Plots"
+msgstr ""
+
+msgid "Autocorrelation Plots"
+msgstr ""
+
+msgid "Bivariate Scatter Plot"
+msgstr ""
+
+msgid "Density"
+msgstr ""
+
+msgid "Chain"
+msgstr ""
+
+msgid "Counts"
+msgstr ""
+
+msgid "Iteration"
+msgstr ""
+
+msgid "Autocorrelation"
+msgstr ""
+
+msgid "Lag"
+msgstr ""
+
+msgid ""
+"At least two parameters need to be monitored and shown to make a bivariate "
+"scatter plot!"
+msgstr ""
+
+msgid "%1$s%2$sIn addition:%3$s%4$s"
+msgstr ""
+
+msgid "The model contains more '%1$s' than '%2$s' (%3$d vs %4$d)"
+msgstr ""
+
+msgid ""
+"There was a problem loading JAGS, JAGS_HOME is: '%1$s'.\n"
+"Please contact the JASP team for support.\n"
+"Error was: %2$s."
+msgstr ""
+
+msgid "Expected JAGS version 4.3.0 but found %s"
+msgstr ""
+
+msgid ""
+"The R code for %1$s crashed with error:\n"
+"%2$s"
+msgstr ""
+
+msgid ""
+"The result of %1$s R code should be numeric but it was of mode %2$s and "
+"class %3$s"
+msgstr ""

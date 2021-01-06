@@ -1,0 +1,164 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: R 3.6.1\n"
+"Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
+"POT-Creation-Date: 2021-01-05 09:39\n"
+"PO-Revision-Date: 2020-12-02 21:29+0000\n"
+"Last-Translator: JASP Stats <F.A.M.Meerhoff@uva.nl>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jasp-engine/"
+"nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
+
+msgid ""
+"The following names appeared both in the data set and in the user specified "
+"data:\n"
+"%s"
+msgstr ""
+"De volgende namen komen zowel voor in de gegevens als in de door de "
+"gebruiker gespecificeerde gegevens:\n"
+"%s"
+
+msgid "Please specify which parameters to monitor!"
+msgstr "Specificeer a.u.b. welke parameters moeten worden beoordeeld!"
+
+msgid "Please specify which parameters to show output for!"
+msgstr ""
+"Specificeer a.u.b. voor welke parameters de uitvoer moet worden getoond!"
+
+msgid "Posterior"
+msgstr "Posterior"
+
+msgid "95%% Credible Interval"
+msgstr "95%% Geloofwaardigheidsinterval"
+
+msgid "Rhat"
+msgstr "R-dakje"
+
+msgid "Parameter"
+msgstr "Parameter"
+
+msgid "Mean"
+msgstr "Gemiddelde"
+
+msgid "Median"
+msgstr "Mediaan"
+
+msgid "SD"
+msgstr "SD"
+
+msgid "Lower"
+msgstr "Onder"
+
+msgid "Upper"
+msgstr "Boven"
+
+msgid "Point est."
+msgstr "Puntschatting."
+
+msgid "Upper CI"
+msgstr "Bovengrens GI"
+
+#, fuzzy
+msgid "Effective Sample Size"
+msgstr "Effectieve Steekproefgrootte"
+
+msgid "No data was supplied, everything was sampled from the priors!"
+msgstr "Geen data gegeven, alles gesampled van de priors!"
+
+msgid "Deviance cannot be computed without data."
+msgstr "Deviatie kan niet berekend worden zonder gegevens."
+
+msgid ""
+"Failed to compute the Rhat statistic. This is expected if the model contains "
+"discrete parameters."
+msgstr ""
+"Kan de R-dakje statistiek niet berekenen. Dit is te verwachten als het model "
+"discrete parameters bevat."
+
+msgid "The multivariate potential scale reduction factor is estimated at %.3f."
+msgstr "De multivariaat potentieelschaal reductiefactor is geschat op %.3f."
+
+msgid ""
+"Rhat statistic cannot be computed for only one chain. It is strongly "
+"recommoned to run more than one chain to assess MCMC convergence!"
+msgstr ""
+"R-dakje statistiek kan niet worden berekend voor een enkele ketting. We "
+"bevelen aan meer dan één ketting uit te voeren om MCMC convergentie te "
+"beoordelen!"
+
+msgid "Marginal Density"
+msgstr "Marginale Dichtheid"
+
+msgid "Marginal Histogram"
+msgstr "Marginale Histogram"
+
+msgid "Trace Plots"
+msgstr "Trace Plots"
+
+msgid "Autocorrelation Plots"
+msgstr "Auto-correlatie grafieken"
+
+msgid "Bivariate Scatter Plot"
+msgstr "Bivariate Spreidingsgrafiek"
+
+msgid "Density"
+msgstr "Dichtheid"
+
+msgid "Chain"
+msgstr "Ketting"
+
+msgid "Counts"
+msgstr "Aantallen"
+
+msgid "Iteration"
+msgstr "Iteratie"
+
+msgid "Autocorrelation"
+msgstr "Auto-correlatie"
+
+msgid "Lag"
+msgstr "Lag"
+
+msgid ""
+"At least two parameters need to be monitored and shown to make a bivariate "
+"scatter plot!"
+msgstr ""
+"Minstens twee parameters moeten worden gemonitord en weergegeven om een "
+"bivariate spreidingsgrafiek te maken!"
+
+msgid "%1$s%2$sIn addition:%3$s%4$s"
+msgstr "%1$s%2$sDaarnaast:%3$s%4$s"
+
+msgid "The model contains more '%1$s' than '%2$s' (%3$d vs %4$d)"
+msgstr "Het model bevat meer '%1$s' dan '%2$s' (%3$d vs %4$d)"
+
+msgid ""
+"There was a problem loading JAGS, JAGS_HOME is: '%1$s'.\n"
+"Please contact the JASP team for support.\n"
+"Error was: %2$s."
+msgstr ""
+"JAGS, JAGS_HOME kon niet worden geladen: '%1$s'.\n"
+"Neem contact op met het JASP-team voor ondersteuning.\n"
+"Fout: %2$s."
+
+msgid "Expected JAGS version 4.3.0 but found %s"
+msgstr "Verwachtte JAGS versie 4.3.0 maar vond %s"
+
+msgid ""
+"The R code for %1$s crashed with error:\n"
+"%2$s"
+msgstr ""
+"De R code voor %1$s is gecrasht met fout:\n"
+"%2$s"
+
+msgid ""
+"The result of %1$s R code should be numeric but it was of mode %2$s and "
+"class %3$s"
+msgstr ""
+"Het resultaat van %1$s R code moet numeriek zijn maar was van type %2$s en "
+"klasse %3$s"

@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "JAGS"
+msgstr "JAGS"
+
+msgctxt "Description|"
+msgid "JAGS interface for JASP"
+msgstr "JAGS interface voor JASP"
+
+msgctxt "JAGS|"
+msgid "Enter JAGS model below"
+msgstr "Voer JAGS-model hieronder in"
+
+msgctxt "JAGS|"
+msgid "Parameters in model"
+msgstr "Parameters in model"
+
+msgctxt "JAGS|"
+msgid "Monitor these parameters"
+msgstr "Monitor deze parameters"
+
+msgctxt "JAGS|"
+msgid "Monitored parameters"
+msgstr "Monitor parameters"
+
+msgctxt "JAGS|"
+msgid "Show results for these parameters"
+msgstr "Toon resultaten voor deze parameters"
+
+msgctxt "JAGS|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "JAGS|"
+msgid "Color scheme for plots:"
+msgstr "Kleurenschema voor grafieken:"
+
+msgctxt "JAGS|"
+msgid "Colorblind"
+msgstr "Kleurenblind"
+
+msgctxt "JAGS|"
+msgid "Colorblind Alt."
+msgstr "Kleurenblind alt."
+
+msgctxt "JAGS|"
+msgid "Viridis"
+msgstr "Viridis"
+
+msgctxt "JAGS|"
+msgid "Blue"
+msgstr "Blauw"
+
+msgctxt "JAGS|"
+msgid "Gray"
+msgstr "Grijs"
+
+msgctxt "JAGS|"
+msgid "Aggregate chains for densities and histograms"
+msgstr "Aggregeer ketens voor verdelingen en histogrammen"
+
+msgctxt "JAGS|"
+msgid "Show legends"
+msgstr "Toon legenda's"
+
+msgctxt "JAGS|"
+msgid "Density"
+msgstr "Dichtheid"
+
+msgctxt "JAGS|"
+msgid "Histogram"
+msgstr "Histogram"
+
+msgctxt "JAGS|"
+msgid "Trace"
+msgstr "Traceer"
+
+msgctxt "JAGS|"
+msgid "Autocorrelation"
+msgstr "Autocorrelatie"
+
+msgctxt "JAGS|"
+msgid "No. lags"
+msgstr "Aantal lags"
+
+msgctxt "JAGS|"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "JAGS|"
+msgid "line"
+msgstr "lijn"
+
+msgctxt "JAGS|"
+msgid "bar"
+msgstr "staaf"
+
+msgctxt "JAGS|"
+msgid "Bivariate scatter"
+msgstr "Bivariate spreiding"
+
+msgctxt "JAGS|"
+msgid "Diagonal plot type"
+msgstr "Diagonaal grafiektype"
+
+msgctxt "JAGS|"
+msgid "Off-diagonal plot type"
+msgstr "Off-diagonaal grafiektype"
+
+msgctxt "JAGS|"
+msgid "Hexagonal"
+msgstr "Hexagonaal"
+
+msgctxt "JAGS|"
+msgid "Contour"
+msgstr "Contour"
+
+msgctxt "JAGS|"
+msgid "Initial Values"
+msgstr "Beginwaarden"
+
+msgctxt "JAGS|"
+msgid "Observed Values"
+msgstr "Geobserveerde waarden"
+
+msgctxt "JAGS|"
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+msgctxt "JAGS|"
+msgid "MCMC parameters"
+msgstr "MCMC parameters"
+
+msgctxt "JAGS|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
+
+msgctxt "JAGS|"
+msgid "No. burnin samples"
+msgstr "Aantal opwarmrondes"
+
+msgctxt "JAGS|"
+msgid "Thinning"
+msgstr "Uitdunnen"
+
+msgctxt "JAGS|"
+msgid "No. chains"
+msgstr "Aantal ketens"
+
+msgctxt "JAGS|"
+msgid "Show results for"
+msgstr "Toon resultaten voor"
+
+msgctxt "JAGS|"
+msgid "all monitored parameters"
+msgstr "alle gecontroleerde parameters"
+
+msgctxt "JAGS|"
+msgid "selected parameters"
+msgstr "geselecteerde parameters"
+
+msgctxt "JAGS|"
+msgid "Show Deviance"
+msgstr "Toon afwijkend gedrag"

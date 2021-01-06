@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: R 3.6.1\n"
+"Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
+"POT-Creation-Date: 2021-01-05 09:39\n"
+"PO-Revision-Date: 2020-12-03 09:42+0000\n"
+"Last-Translator: Thomas Langkamp <thomas.lassdiesonnerein@gmx.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/jasp-engine/"
+"de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
+
+msgid ""
+"The following names appeared both in the data set and in the user specified "
+"data:\n"
+"%s"
+msgstr ""
+"Die folgenden Namen erscheinen sowohl im Datensatz und den "
+"benutzerdefinierten Daten:\n"
+"%s"
+
+msgid "Please specify which parameters to monitor!"
+msgstr "Bitte spezifiziere, welche Parameter beobachtet werden sollen!"
+
+msgid "Please specify which parameters to show output for!"
+msgstr "Bitte gib an, für welche Parameter die Ausgabe gezeigt werden soll!"
+
+msgid "Posterior"
+msgstr "Posterior"
+
+msgid "95%% Credible Interval"
+msgstr "95%% Glaubwürdigkeitsintervall"
+
+msgid "Rhat"
+msgstr "R-Dach"
+
+msgid "Parameter"
+msgstr "Parameter"
+
+msgid "Mean"
+msgstr "Mittelwert"
+
+msgid "Median"
+msgstr "Median"
+
+msgid "SD"
+msgstr "SD"
+
+msgid "Lower"
+msgstr "Untere"
+
+msgid "Upper"
+msgstr "Obere"
+
+msgid "Point est."
+msgstr "Punktschätzung"
+
+msgid "Upper CI"
+msgstr "Obergrenze KI"
+
+#, fuzzy
+msgid "Effective Sample Size"
+msgstr "Effektiver Stichprobenumfang"
+
+msgid "No data was supplied, everything was sampled from the priors!"
+msgstr "Es wurden keine Daten übergeben, alles gezogen aus den Priors!"
+
+msgid "Deviance cannot be computed without data."
+msgstr "Devianz kann ohne Daten nicht berechnet werden."
+
+msgid ""
+"Failed to compute the Rhat statistic. This is expected if the model contains "
+"discrete parameters."
+msgstr ""
+"Die R-Dach-Statistik konnte nicht berechnet werden. Dies ist zu erwarten, "
+"wenn das Modell diskrete Parameter enthält."
+
+msgid "The multivariate potential scale reduction factor is estimated at %.3f."
+msgstr ""
+"Der multivariate potentielle Skalierungsreduktionsfaktor wird geschätzt auf "
+"%.3f."
+
+msgid ""
+"Rhat statistic cannot be computed for only one chain. It is strongly "
+"recommoned to run more than one chain to assess MCMC convergence!"
+msgstr ""
+"Die R-Dach-Statistik kann nicht für nur eine Kette berechnet werden. Es wird "
+"dringend empfohlen, zur Beurteilung der MCMC-Konvergenz mehr als eine Kette "
+"laufen zu lassen!"
+
+msgid "Marginal Density"
+msgstr "Randdichte"
+
+msgid "Marginal Histogram"
+msgstr "Randhistogramm"
+
+msgid "Trace Plots"
+msgstr "Verlaufsdiagramme"
+
+msgid "Autocorrelation Plots"
+msgstr "Autokorrelationsplots"
+
+msgid "Bivariate Scatter Plot"
+msgstr "Bivariates Streudiagramm"
+
+msgid "Density"
+msgstr "Dichte"
+
+msgid "Chain"
+msgstr "Kette"
+
+msgid "Counts"
+msgstr "Anzahlen"
+
+msgid "Iteration"
+msgstr "Iteration"
+
+msgid "Autocorrelation"
+msgstr "Autokorrelation"
+
+msgid "Lag"
+msgstr "Verzögerung"
+
+msgid ""
+"At least two parameters need to be monitored and shown to make a bivariate "
+"scatter plot!"
+msgstr ""
+"Mindestens zwei Parameter müssen beobachtet und angezeigt werden, um ein "
+"bivariates Streudiagramm zu erstellen!"
+
+msgid "%1$s%2$sIn addition:%3$s%4$s"
+msgstr "%1$s%2$sZusätzlich:%3$s%4$s"
+
+msgid "The model contains more '%1$s' than '%2$s' (%3$d vs %4$d)"
+msgstr "Das Modell beinhaltet mehr '%1$s' als '%2$s' (%3$d vs %4$d)"
+
+msgid ""
+"There was a problem loading JAGS, JAGS_HOME is: '%1$s'.\n"
+"Please contact the JASP team for support.\n"
+"Error was: %2$s."
+msgstr ""
+"Es gab ein Problem beim Laden von JAGS, JAGS_HOME ist: '%1$s'.\n"
+"Bitte kontaktiere das JASP-Team für Hilfe.\n"
+"Der Fehler war: %2$s."
+
+msgid "Expected JAGS version 4.3.0 but found %s"
+msgstr "Erwartete JAGS-Version 4.3.0, aber %s gefunden"
+
+msgid ""
+"The R code for %1$s crashed with error:\n"
+"%2$s"
+msgstr ""
+"Der R-Code für %1$s ist abgestürzt, mit Fehler:\n"
+"%2$s"
+
+msgid ""
+"The result of %1$s R code should be numeric but it was of mode %2$s and "
+"class %3$s"
+msgstr ""
+"Das Ergebnis von %1$s R-Code muss numerisch sein, aber war vom Typ %2$s und "
+"Klasse %3$s"
