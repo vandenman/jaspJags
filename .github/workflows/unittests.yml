@@ -51,10 +51,17 @@ jobs:
 
       - name: setup renv
         run: |
-          print(getwd())
+          print("renv::diagnostics() 1")
           renv::diagnostics()
+          print("renv::restore() 1")
           renv::restore()
+          print("renv::diagnostics() 2")
           renv::diagnostics()
+          print("renv::restore() 2")
+          renv::restore()
+          print("renv::diagnostics() 3")
+          renv::diagnostics()
+          print("end")
         shell: Rscript {0}
 
       - name: Install JAGS on macOS
@@ -69,14 +76,16 @@ jobs:
         run: |
           if (.Platform$OS.type == "windows" && "true" == "true") {
             path <- normalizePath(file.path("..", "pkgs", "64", "JAGS"), winslash = "/")
-            cat("\nSys.setenv(JAGS_HOME = '", path, "')\n", file = "~/.Rprofile", sep = "", append = TRUE)
+            cat("\nSys.setenv(JAGS_HOME = '", path, "')\n", file = ".Rprofile", sep = "", append = TRUE)
+            print(readLines(".Rprofile"))
+          } else {
+            print("Skipping this step!")
           }
         shell: Rscript {0}
 
       - name: Setup jaspTools
         run: |
-          install.packages("remotes")
-          remotes::install_github("jasp-stats/jaspTools")
+          renv::install("jasp-stats/jaspTools")
           jaspTools::setupJaspTools()
         shell: Rscript {0}
 
