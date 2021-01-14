@@ -27,6 +27,21 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
 
+
+        # we only need this for jags...
+      - name: Clone jasp-required-files
+        if: runner.os == 'Windows'
+        run: |
+          if [ "${{ runner.os }}" = 'macOS' ]; then
+            branch='MacOS-Original'
+          else
+            branch='Windows'
+          fi
+          echo "branch=$branch"
+          git clone --branch=$branch https://github.com/jasp-stats/jasp-required-files.git pkgs
+        working-directory: ..
+        shell: bash
+
       - name: Install system dependencies on macOS
         run: |
           if [ "${{ runner.os }}" = 'macOS' ]; then
@@ -37,19 +52,9 @@ jobs:
       - name: setup renv
         run: |
           print(getwd())
-          print(dir())
-          install.packages("renv")
-          renv::diagnostics()
-          renv::activate()
           renv::diagnostics()
           renv::restore()
-        shell: Rscript {0}
-
-      - name: Set R library path
-        run: |
-          libPath <- if (.Platform$OS.type == "windows") "/R/library" else "/Frameworks/R.framework/Versions/3.6/Resources/library/"
-          path <- normalizePath(file.path("..", "pkgs", libPath), winslash = "/")
-          cat("\n.libPaths(c('", path, "', .libPaths()))\n", file = "~/.Rprofile", sep = "", append = TRUE)
+          renv::diagnostics()
         shell: Rscript {0}
 
       - name: Install JAGS on macOS
