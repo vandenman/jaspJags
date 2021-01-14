@@ -51,6 +51,7 @@ jobs:
 
       - name: setup renv
         run: |
+          options(install.opts = c("--no-multiarch", "--no-docs"))
           print("renv::diagnostics() 1")
           renv::diagnostics()
           print("renv::restore() 1")
