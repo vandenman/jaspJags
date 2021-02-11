@@ -127,9 +127,10 @@ Form
 		title: qsTr("Initial Values")
 		JagsTableView
 		{
-			name		:	"initialValues"
-			tableType	:	"initialValues"
-			source		:	[{ name: "model", discard: { name: "userData", use: "Parameter"}}]
+			name				:	"initialValues"
+			isFirstColEditable	:	false
+			showButtons			:	false
+			source				:	[{ name: "model", discard: { name: "userData", use: "Parameter"}}]
 		}
 	}
 
@@ -139,7 +140,6 @@ Form
 		JagsTableView
 		{
 			name		:	"userData"
-			tableType	:	"userDataInput"
 		}
 	}
 
