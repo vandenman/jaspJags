@@ -49,11 +49,9 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   model <- options[["model"]][["model"]]
 
   # TODO: uncomment these before merge in JASP!
-  location <- .fromRCPP(".requestTempFileNameNative", ".txt")
+  location  <- .fromRCPP(".requestTempFileNameNative", ".txt")
   modelFile <- file.path(location$root, location$relativePath)
-  # modelFile <- tempfile(pattern = "jagsModel", fileext = ".txt")
-  print(modelFile)
-  fileConn <- file(modelFile)
+  fileConn  <- file(modelFile)
   writeLines(model, fileConn)
   close(fileConn)
 
@@ -283,9 +281,12 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
   tb$addColumnInfo(name = "97.5%",     title = gettext("Upper"),                 type = "number", overtitle = ovt1)
   tb$addColumnInfo(name = "rhatPoint", title = gettext("Point est."),            type = "number", overtitle = ovt2)
   tb$addColumnInfo(name = "rhatCI",    title = gettext("Upper CI"),              type = "number", overtitle = ovt2)
-  tb$addColumnInfo(name = "neff",      title = gettext("Effective Sample Size"), type = "number")
+  tb$addColumnInfo(name = "neff",      title = gettext("Effective Sample Size"), type = "integer")
 
   if (!is.null(mcmcResult) && !jaspResults[["mainContainer"]]$getError()) {
+
+    tb$addFootnote(gettextf("Output based on %s MCMC draws.",
+                            floor(options[["noSamples"]] / options[["noThinning"]]) * options[["noChains"]]))
 
     if (!.JAGShasData(options) && !mcmcResult[["hasUserData"]]) {
       tb$addFootnote(message = gettext("No data was supplied, everything was sampled from the priors!"), symbol = .JAGSWarningSymbol)
@@ -302,6 +303,7 @@ JAGS <- function(jaspResults, dataset, options, state = NULL) {
     idx <- nms2 %in% parametersToShow
 
     tbR <- as.data.frame(sum[idx, c("Mean", "SD", "50%", "2.5%", "97.5%", "neff"), drop = FALSE])
+    tbR[["neff"]] <- as.integer(tbR[["neff"]])
     tbR$parameter <- nms[idx]
 
     if (options[["noChains"]] > 1L) {
