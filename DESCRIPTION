@@ -22,5 +22,3 @@ Imports:
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs
-Suggests:
-    covr

@@ -36,6 +36,9 @@ jobs:
           install.packages(c("remotes"))
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("covr")
+          # temporarily!
+          remotes::install_github("vandenman/jaspTools@support_binary_pkgs")
+          jaspTools::setupJaspTools()
         shell: Rscript {0}
 
       - name: Test coverage
