@@ -1,4 +1,8 @@
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron:  '30 16 * * 2,4' # tuesday and thursday at 17:00 Amsterdam time (16:00 UTC)
 
 name: unit-tests
 
