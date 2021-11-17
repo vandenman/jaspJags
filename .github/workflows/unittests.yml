@@ -2,7 +2,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron:  '0 10,16,22 * * 1-5'
+    - cron:  '47 9,15,21 * * 1-5'
 
 name: unit-tests
 
